@@ -19,7 +19,27 @@ import Login from '../../pages/Login';
 import Senators from '../../pages/Senators';
 import Leafs from '../../pages/Leafs';
 import Flames from '../../pages/Flames';
-import Krak from '../../pages/Krak';
+import Krakens from '../../pages/Krakens';
+import Wild from '../../pages/Wild';
+import Jets from '../../pages/Jets';
+import Predators from '../../pages/Predators';
+import Blues from '../../pages/Blues';
+import Avalanche from '../../pages/Avalanche';
+import Stars from '../../pages/Stars';
+import Blackhawks from '../../pages/Blackhawks';
+import Jackets from '../../pages/Jackets';
+import Capitals from '../../pages/Capitals';
+import Penguins from '../../pages/Penguins';
+import Flyers from '../../pages/Flyers';
+import Rangers from '../../pages/Rangers';
+import Islanders from '../../pages/Islanders';
+import Devils from '../../pages/Devils';
+import Hurricanes from '../../pages/Hurricanes';
+import Panthers from '../../pages/Panthers';
+import Lightning from '../../pages/Lightning';
+import Canadians from '../../pages/Canadians';
+import Sabers from '../../pages/Sabers';
+import Wings from '../../pages/Wings';
 import { Link, Navigate, redirect } from 'react-router-dom';
 import { BreadcrumbItem } from 'react-bootstrap'
 
@@ -35,11 +55,31 @@ function getItem(label, key, icon, children) {
 const items = [
   
   getItem('Players','sub', <TeamOutlined />, [
-    getItem('AllPlayers','20',<Link to="/home"/> ),
-    getItem('Senators','1',<Link to="/Senators"/> ),
-    getItem('Maple Leafs','2',<Link to="/Leafs"/>),
-    getItem('Flames', '3', <Link to="/Flames"/>),
-    getItem('Krakens', '4', <Link to="/Krak"/>),
+    getItem('AllPlayers','37',<Link to="/home"/> ),
+    getItem('Senators','5',<Link to="/Senators"/> ),
+    getItem('Maple Leafs','7',<Link to="/Leafs"/>),
+    getItem('Flames', '24', <Link to="/Flames"/>),
+    getItem('Krakens', '36', <Link to="/Krakens"/>),
+    getItem('Wild', '23', <Link to="/Wild"/>),
+    getItem('Jets', '22', <Link to="/Jets"/>),
+    getItem('Predators', '21', <Link to="/Predators"/>),
+    getItem('Blues', '20', <Link to="/Blues"/>),
+    getItem('Avalache', '19', <Link to="/Avalanche"/>),
+    getItem('Stars', '18', <Link to="/Stars"/>),
+    getItem('Blackhawks', '17', <Link to="/Blackhawks"/>),
+    getItem('Blue Jackets', '16', <Link to="/Jackets"/>),
+    getItem('Capitals', '15', <Link to="/Capitals"/>),
+    getItem('Penguins', '14', <Link to="/Penguins"/>),
+    getItem('Flyers', '13', <Link to="/Flyers"/>),
+    getItem('Rangers', '12', <Link to="/Rangers"/>),
+    getItem('Islanders', '11', <Link to="/Islanders"/>),
+    getItem('Devils', '10', <Link to="/Devils"/>),
+    getItem('Hurricanes', '9', <Link to="/Hurricanes"/>),
+    getItem('Panthers', '8', <Link to="/Panthers"/>),
+    getItem('Lightning', '6', <Link to="/Lighting"/>),
+    getItem('Canadians', '4', <Link to="/Canadians"/>),
+    getItem('Sabers', '2', <Link to="/Sabers"/>),
+    getItem('Red Wings', '3', <Link to="/Wings"/>),
     //getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
   ]),
   getItem('My Team', 'sub2', <UserOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),

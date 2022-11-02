@@ -11,7 +11,27 @@ import Home from './pages/Home';
 import Senators from './pages/Senators';
 import Leafs from './pages/Leafs';
 import Flames from './pages/Flames';
-import Krak from './pages/Krak';
+import Krakens from './pages/Krakens';
+import Wild from './pages/Wild';
+import Jets from './pages/Jets';
+import Predators from './pages/Predators';
+import Blues from './pages/Blues';
+import Avalanche from './pages/Avalanche';
+import Stars from './pages/Stars';
+import Blackhawks from './pages/Blackhawks';
+import Jackets from './pages/Jackets';
+import Capitals from './pages/Capitals';
+import Penguins from './pages/Penguins';
+import Flyers from './pages/Flyers';
+import Rangers from './pages/Rangers';
+import Islanders from './pages/Islanders';
+import Devils from './pages/Devils';
+import Hurricanes from './pages/Hurricanes';
+import Panthers from './pages/Panthers';
+import Lightning from './pages/Lightning';
+import Canadians from './pages/Canadians';
+import Wings from './pages/Wings';
+import Sabers from './pages/Sabers';
 import NoMatch from './pages/NoMatch';
 import AppNavBar from './components/NavBar/NavBar';
 
@@ -98,7 +118,27 @@ function App() {
                 <Route path="/Senators" element={<Senators></Senators>}></Route>
                 <Route path="/Leafs" element={<Leafs></Leafs>}></Route>
                 <Route path="/Flames" element={<Flames></Flames>}></Route>
-                <Route path="/Krak" element={<Krak></Krak>}></Route>
+                <Route path="/Krakens" element={<Krakens></Krakens>}></Route>
+                <Route path="/Wild" element={<Wild></Wild>}></Route>
+                <Route path="/Jets" element={<Jets></Jets>}></Route>
+                <Route path="/Predators" element={<Predators></Predators>}></Route>
+                <Route path="/Blues" element={<Blues></Blues>}></Route>
+                <Route path="/Avalanche" element={<Avalanche></Avalanche>}></Route>
+                <Route path="/Stars" element={<Stars></Stars>}></Route>
+                <Route path="/Blackhawks" element={<Blackhawks></Blackhawks>}></Route>
+                <Route path="/Jackets" element={<Jackets></Jackets>}></Route>
+                <Route path="/Capitals" element={<Capitals></Capitals>}></Route>
+                <Route path="/Penguins" element={<Penguins></Penguins>}></Route>
+                <Route path="/Flyers" element={<Flyers></Flyers>}></Route>
+                <Route path="/Rangers" element={<Rangers></Rangers>}></Route>
+                <Route path="/Islanders" element={<Islanders></Islanders>}></Route>
+                <Route path="/Devils" element={<Devils></Devils>}></Route>
+                <Route path="/Hurricanes" element={<Hurricanes></Hurricanes>}></Route>
+                <Route path="/Panthers" element={<Panthers></Panthers>}></Route>
+                <Route path="/Lightning" element={<Lightning></Lightning>}></Route>
+                <Route path="/Canadians" element={<Canadians></Canadians>}></Route>
+                <Route path="/Wings" element={<Wings></Wings>}></Route>
+                <Route path="/Sabers" element={<Sabers></Sabers>}></Route>
                 <Route path="*" element={<NoMatch />}  
             />
             

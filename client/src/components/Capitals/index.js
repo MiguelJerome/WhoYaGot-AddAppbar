@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { QUERY_PLAYERS } from '../utils/queries';
 
-function Krak(props) {
+function Capitals(props) {
     const numbers = props.value;
     const keys  =  props.id;
     const fantasyPoints = props.FantasyPoints;
@@ -13,7 +13,7 @@ function Krak(props) {
     const team = props.Team;
     const teamID = props.TeamID;
     
-    const teamIDKrak = 36;
+    const teamIDCapitals = 15;
     
     const {loading, data  } = useQuery(QUERY_PLAYERS);
     const players = data?.players ||[];
@@ -34,11 +34,11 @@ function Krak(props) {
                             <div className = "logoPlayer">
                                 <h1>Player Card</h1>
                                     <ul className="navigationPlayer">
-                                        <li>TeamID:{players[teamIDKrak].TeamID}</li>
-                                        <li>PlayerID:{players[teamIDKrak].PlayerID}</li>
-                                        <li>Name:{players[teamIDKrak].Name}</li>
-                                        <li>Team:{players[teamIDKrak].Team}</li>
-                                        <li>FantasyPoints:{players[teamIDKrak].FantasyPoints}</li>
+                                        <li>TeamID:{players[teamIDCapitals].TeamID}</li>
+                                        <li>PlayerID:{players[teamIDCapitals].PlayerID}</li>
+                                        <li>Name:{players[teamIDCapitals].Name}</li>
+                                        <li>Team:{players[teamIDCapitals].Team}</li>
+                                        <li>FantasyPoints:{players[teamIDCapitals].FantasyPoints}</li>
                                     </ul>
                             </div>
                         </div>    
@@ -50,4 +50,4 @@ function Krak(props) {
   );
 }
 
-export default Krak;
+export default Capitals;
