@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import Home from './pages/Home';
+import Senators from './pages/Senators';
 import NoMatch from './pages/NoMatch';
 import AppNavBar from './components/NavBar/NavBar';
 
@@ -91,8 +92,8 @@ function App() {
                 <Route path="/home" exact element={<Home></Home>}></Route>
                 <Route path="/signup" element={<Signup></Signup>}></Route>
                 <Route path="/login" element={<Login></Login>}></Route>
-                <Route path="*" element={<NoMatch />} 
-                
+                <Route path="/Senators" element={<Senators></Senators>}></Route>
+                <Route path="*" element={<NoMatch />}  
             />
             
               </Routes>

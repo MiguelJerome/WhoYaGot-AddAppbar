@@ -16,6 +16,7 @@ import React, { useState } from 'react';
 import Home from '../../pages/Home';
 import SignUp from '../../pages/Signup';
 import Login from '../../pages/Login';
+import Senators from '../../pages/Senators';
 import { Link, Navigate, redirect } from 'react-router-dom';
 import { BreadcrumbItem } from 'react-bootstrap'
 
@@ -31,7 +32,7 @@ function getItem(label, key, icon, children) {
 const items = [
   getItem('Players','sub', <TeamOutlined />, [
     getItem('AllPlayers','20',<Link to="/home"/> ),
-    getItem('Senators','1',<img src={Sens} width='40' height='40' />),
+    getItem('Senators','1',<Link to="/Senators"/> ),
     getItem('Maple Leafs','2',<img src={Leafs} width='40' height='35' />),
     getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
   ]),
@@ -87,7 +88,7 @@ const AppNavBar = () => {
               minHeight: 360,
             }}
           >
-           
+                  
           </div>
           
         </Content>

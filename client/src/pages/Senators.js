@@ -23,9 +23,13 @@ const Home = () => {
         <h1 className = "playercard-title">NHL Players:</h1>
           <div className='Card-body'>
             <div class = "main-container" key={players._id}>
+
+
               {players.map((player, index ) => (  
                 <Player Name={player.Name} PlayerID={player.PlayerID} FantasyPoints={player.FantasyPoints} TeamID={player.TeamID} Position={player.Position} Team ={player.Team} id={player._id} key={player._id } value={index} />  
               ))}  
+
+              
             </div>
           </div>
       </div>
