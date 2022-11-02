@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { QUERY_PLAYERS } from '../utils/queries';
 
-function Senators(props) {
+function Bruins(props) {
     const numbers = props.value;
     const keys  =  props.id;
     const fantasyPoints = props.FantasyPoints;
@@ -12,7 +12,7 @@ function Senators(props) {
     const position = props.Position;
     const team = props.Team;
     const teamID = props.TeamID;
-    
+ 
     const {loading, data  } = useQuery(QUERY_PLAYERS);
     const players = data?.players ||[];
     
@@ -48,4 +48,4 @@ function Senators(props) {
   );
 }
 
-export default Senators;
+export default Bruins;

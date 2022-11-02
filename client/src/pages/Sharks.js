@@ -5,7 +5,7 @@ import { QUERY_PLAYERS } from '../utils/queries';
 
 const Home = () => {
   
-  const teamIDSenators = 5;
+  const teamIDSharks = 27;
   const { loading, data } = useQuery(QUERY_PLAYERS);
   const players = data?.players || [];
 
@@ -20,7 +20,7 @@ const Home = () => {
           <div className='Card-body'>
             <div class = "main-container" key={players._id}>
               {players.map((player, index ) => (  
-                player.TeamID === teamIDSenators ? (<Player Name={player.Name} PlayerID={player.PlayerID} FantasyPoints={player.FantasyPoints} TeamID={player.TeamID} Position={player.Position} Team ={player.Team} id={player._id} key={player._id } value={index} />) :(<></>) 
+                player.TeamID === teamIDSharks ? (<Player Name={player.Name} PlayerID={player.PlayerID} FantasyPoints={player.FantasyPoints} TeamID={player.TeamID} Position={player.Position} Team ={player.Team} id={player._id} key={player._id } value={index} />) :(<></>) 
               ))}  
             </div>
           </div>

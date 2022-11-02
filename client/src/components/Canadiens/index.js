@@ -34,7 +34,7 @@ function Senators(props) {
                                     <ul className="navigationPlayer">
                                         <li>TeamID:{players.TeamID}</li>
                                         <li>PlayerID:{players.PlayerID}</li>
-                                        <li>Name:{players.Name}</li>
+                                        <li>Name:{QUERY_PLAYERS.Name}</li>
                                         <li>Team:{players.Team}</li>
                                         <li>FantasyPoints:{players.FantasyPoints}</li>
                                     </ul>

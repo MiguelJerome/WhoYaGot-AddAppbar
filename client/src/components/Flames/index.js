@@ -12,7 +12,7 @@ function Senators(props) {
     const position = props.Position;
     const team = props.Team;
     const teamID = props.TeamID;
-    
+
     const {loading, data  } = useQuery(QUERY_PLAYERS);
     const players = data?.players ||[];
     
