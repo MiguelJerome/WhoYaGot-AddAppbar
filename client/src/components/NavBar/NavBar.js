@@ -30,6 +30,7 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
+  
   getItem('Players','sub', <TeamOutlined />, [
     getItem('AllPlayers','20',<Link to="/home"/> ),
     getItem('Senators','1',<Link to="/Senators"/> ),
@@ -58,6 +59,7 @@ const AppNavBar = () => {
    
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        
         
       </Sider>
       <Layout className="site-layout">
