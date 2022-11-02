@@ -26,7 +26,7 @@ const Home = () => {
 
 
               {players.map((player, index ) => (  
-              player.TeamID === 21 ? (<Player Name={player.Name} PlayerID={player.PlayerID} FantasyPoints={player.FantasyPoints} TeamID={player.TeamID} Position={player.Position} Team ={player.Team} id={player._id} key={player._id } value={index} />) :(<></>) 
+              player.TeamID === 36 ? (<Player Name={player.Name} PlayerID={player.PlayerID} FantasyPoints={player.FantasyPoints} TeamID={player.TeamID} Position={player.Position} Team ={player.Team} id={player._id} key={player._id } value={index} />) :(<></>) 
               ))}  
 
               

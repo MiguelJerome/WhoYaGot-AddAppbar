@@ -12,11 +12,11 @@ import NoMatch from './pages/NoMatch';
 //all the team pages
 import Bruins from './pages/Bruins';
 import Sabers from './pages/Sabers';
-import RedWings from './pages/RedWings';
+import Wings from './pages/Wings';
 import Canadiens from './pages/Canadiens';
 import Senators from './pages/Senators';
 import Lightning from './pages/Ligthning';
-import MapleLeafs from './pages/MapleLeafs';
+import Leafs from './pages/MapleLeafs';
 import Panthers from './pages/Panthers';
 import Hurricanes from './pages/Hurricanes';
 import Devils from './pages/Devils';
@@ -25,7 +25,7 @@ import Rangers from './pages/Rangers';
 import Flyers from './pages/Flyers';
 import Penguins from './pages/Penguins';
 import Capitals from './pages/Capitals';
-import BlueJackets from './pages/BlueJackets';
+import Jackets from './pages/Jackets';
 import Blackhawks from './pages/Blackhawks';
 import Stars from './pages/Stars';
 import Avalanche from './pages/Avalanche';
@@ -41,7 +41,7 @@ import Canucks from './pages/Canucks';
 import Coyotes from './pages/Coyotes';
 import Ducks from './pages/Ducks';
 import GoldenKnights from './pages/GoldenKnights';
-import Kraken from './pages/Kraken';
+import Krakens from './pages/Krakens';
 
 //app bar
 import AppNavBar from './components/NavBar/NavBar';
@@ -104,6 +104,7 @@ import Button from '@mui/material/Button';
     return (
       <ApolloProvider client={client}>
         <Router   >
+
           <div className = "container" >
             <Routes>
               <Route path="/" />
@@ -111,30 +112,31 @@ import Button from '@mui/material/Button';
               <Route path="/signup" element={<Signup></Signup>}></Route>
               <Route path="/login" element={<Login></Login>}></Route>
               <Route path="*" element={<NoMatch />}/>    
-              <Route path="/Bruins" element={<Bruins></Bruins>}></Route>
-              <Route path="/Sabers" element={<Sabers></Sabers>}></Route>
-              <Route path="/RedWings" element={<RedWings></RedWings>}></Route>
-              <Route path="/Canadiens" element={<Canadiens></Canadiens>}></Route>
               <Route path="/Senators" element={<Senators></Senators>}></Route>
-              <Route path="/Lightning" element={<Lightning></Lightning>}></Route>
-              <Route path="/MapleLeafs" element={<MapleLeafs></MapleLeafs>}></Route>
-              <Route path="/Panthers" element={<Panthers></Panthers>}></Route>
-              <Route path="/Hurricanes" element={<Hurricanes></Hurricanes>}></Route>
-              <Route path="/Devils" element={<Devils></Devils>}></Route>
-              <Route path="/Islanders" element={<Islanders></Islanders>}></Route>
-              <Route path="/Rangers" element={<Rangers></Rangers>}></Route>
-              <Route path="/Flyers" element={<Flyers></Flyers>}></Route>
-              <Route path="/Penguins" element={<Penguins></Penguins>}></Route>
-              <Route path="/Capitals" element={<Capitals></Capitals>}></Route>
-              <Route path="/BlueJackets" element={<BlueJackets></BlueJackets>}></Route>
-              <Route path="/Blackhawks" element={<Blackhawks></Blackhawks>}></Route>
-              <Route path="/Stars" element={<Stars></Stars>}></Route>
-              <Route path="/Avalanche" element={<Avalanche></Avalanche>}></Route>
-              <Route path="/Blues" element={<Blues></Blues>}></Route>
-              <Route path="/Predators" element={<Predators></Predators>}></Route>
-              <Route path="/Jets" element={<Jets></Jets>}></Route>
-              <Route path="/Wild" element={<Wild></Wild>}></Route>
+              <Route path="/Leafs" element={<Leafs></Leafs>}></Route>
               <Route path="/Flames" element={<Flames></Flames>}></Route>
+              <Route path="/Krakens" element={<Krakens></Krakens>}></Route>
+              <Route path="/Wild" element={<Wild></Wild>}></Route>
+              <Route path="/Jets" element={<Jets></Jets>}></Route>
+              <Route path="/Predators" element={<Predators></Predators>}></Route>
+              <Route path="/Blues" element={<Blues></Blues>}></Route>
+              <Route path="/Avalanche" element={<Avalanche></Avalanche>}></Route>
+              <Route path="/Stars" element={<Stars></Stars>}></Route>
+              <Route path="/Blackhawks" element={<Blackhawks></Blackhawks>}></Route>
+              <Route path="/Jackets" element={<Jackets></Jackets>}></Route>
+              <Route path="/Capitals" element={<Capitals></Capitals>}></Route>
+              <Route path="/Penguins" element={<Penguins></Penguins>}></Route>
+              <Route path="/Flyers" element={<Flyers></Flyers>}></Route>
+              <Route path="/Rangers" element={<Rangers></Rangers>}></Route>
+              <Route path="/Islanders" element={<Islanders></Islanders>}></Route>
+              <Route path="/Devils" element={<Devils></Devils>}></Route>
+              <Route path="/Hurricanes" element={<Hurricanes></Hurricanes>}></Route>
+              <Route path="/Panthers" element={<Panthers></Panthers>}></Route>
+              <Route path="/Lightning" element={<Lightning></Lightning>}></Route>
+              <Route path="/Canadians" element={<Canadians></Canadians>}></Route>
+              <Route path="/Wings" element={<Wings></Wings>}></Route>
+              <Route path="/Sabers" element={<Sabers></Sabers>}></Route>
+              <Route path="/Bruins" element={<Bruins></Bruins>}></Route>
               <Route path="/Oilers" element={<Oilers></Oilers>}></Route>
               <Route path="/Kings" element={<Kings></Kings>}></Route>
               <Route path="/Sharks" element={<Sharks></Sharks>}></Route>
@@ -143,7 +145,6 @@ import Button from '@mui/material/Button';
               <Route path="/Coyotes" element={<Coyotes></Coyotes>}></Route>
               <Route path="/Ducks" element={<Ducks></Ducks>}></Route>
               <Route path="/GoldenKnights" element={<GoldenKnights></GoldenKnights>}></Route>
-              <Route path="/Kraken" element={<Kraken></Kraken>}></Route>
             </Routes>
           </div>
           <Box color="inherit"   sx={{ color:'red', display: 'flex' }}>
@@ -178,6 +179,7 @@ import Button from '@mui/material/Button';
                     </Box>
               </Toolbar>
             </AppBar>
+
           </Box>
             <AppNavBar/>
         </Router> 

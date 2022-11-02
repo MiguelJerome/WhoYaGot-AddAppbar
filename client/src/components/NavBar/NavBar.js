@@ -9,7 +9,35 @@ import {
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Home from '../../pages/Home';
+import SignUp from '../../pages/Signup';
+import Login from '../../pages/Login';
+import Senators from '../../pages/Senators';
+import Leafs from '../../pages/Leafs';
+import Flames from '../../pages/Flames';
+import Krakens from '../../pages/Krakens';
+import Wild from '../../pages/Wild';
+import Jets from '../../pages/Jets';
+import Predators from '../../pages/Predators';
+import Blues from '../../pages/Blues';
+import Avalanche from '../../pages/Avalanche';
+import Stars from '../../pages/Stars';
+import Blackhawks from '../../pages/Blackhawks';
+import Jackets from '../../pages/Jackets';
+import Capitals from '../../pages/Capitals';
+import Penguins from '../../pages/Penguins';
+import Flyers from '../../pages/Flyers';
+import Rangers from '../../pages/Rangers';
+import Islanders from '../../pages/Islanders';
+import Devils from '../../pages/Devils';
+import Hurricanes from '../../pages/Hurricanes';
+import Panthers from '../../pages/Panthers';
+import Lightning from '../../pages/Lightning';
+import Canadians from '../../pages/Canadians';
+import Sabers from '../../pages/Sabers';
+import Wings from '../../pages/Wings';
+import { Link, Navigate, redirect } from 'react-router-dom';
+import { BreadcrumbItem } from 'react-bootstrap'
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -21,49 +49,50 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-    getItem('Players','sub', <TeamOutlined />, [
-      getItem('AllPlayers','200',<Link to="/home"/> ),
-      getItem('Bruins','1',<Link to="/Bruins"/> ),
-      getItem('Sabers','2',<Link to="/Sabers"/>),
-      getItem('Red Wings', '3', <Link to="/RedWings"/>),
-      getItem('Canadiens','4',<Link to="/Canadiens"/> ),
-      getItem('Senators','5',<Link to="/Senators"/> ),
-      getItem('Ligthning','6',<Link to="/Lightning"/> ),
-      getItem('Maple Leafs','7',<Link to="/MapleLeafs"/> ),
-      getItem('Panthers','8',<Link to="/Panthers"/> ),
-      getItem('Hurricanes','9',<Link to="/Hurricanes"/> ),
-      getItem('Devils','10',<Link to="/Devils"/> ),
-      getItem('Islanders','11',<Link to="/Islanders"/> ),
-      getItem('Rangers','12',<Link to="/Rangers"/> ),
-      getItem('Flyers','13',<Link to="/Flyers"/> ),
-      getItem('Penguins','14',<Link to="/Penguins"/> ),
-      getItem('Capitals','15',<Link to="/Capitals"/> ),
-      getItem('Blue Jackets','16',<Link to="/BlueJackets"/> ),
-      getItem('Blackhawks','17',<Link to="/Blackhawks"/> ),
-      getItem('Stars','18',<Link to="/Stars"/> ),
-      getItem('Avalanche','19',<Link to="/Avalanche"/> ),
-      getItem('Blues','20',<Link to="/Blues"/> ),
-      getItem('Predators','21',<Link to="/Predators"/> ),
-      getItem('Jets','22',<Link to="/Jets"/> ),
-      getItem('Wild','23',<Link to="/Wild"/> ),
-      getItem('Flames','24',<Link to="/Flames"/> ),
-      getItem('Oilers','25',<Link to="/Oilers"/> ),
-      getItem('Kings','26',<Link to="/Kings"/> ),
-      getItem('Sharks','27',<Link to="/Sharks"/> ),
-      getItem('Canucks','28',<Link to="/Canucks"/> ),
-      getItem('Coyotes','29',<Link to="/Coyotes"/> ),
-      getItem('Ducks','30',<Link to="/Ducks"/> ),
-      getItem('Golden Knights','35',<Link to="/GoldenKnights"/> ),
-      getItem('Kraken','36',<Link to="/Kraken"/> ),
-    ]),
-      getItem('My Team', 'sub2', <UserOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-      getItem('Users Teams', 'sub3', <UserOutlined />),
-      getItem('Signin', 'sub4', <Link to="/signup"/>  ),
-      getItem('Login', 'sub5', <Link to="/login"/>  ),
-      getItem('Signout', 'sub6', <Link to="/" />
-      ),
-    ];
+  
+  getItem('Players','sub', <TeamOutlined />, [
+    getItem('AllPlayers','37',<Link to="/home"/> ),
+    getItem('Senators','5',<Link to="/Senators"/> ),
+    getItem('Maple Leafs','7',<Link to="/Leafs"/>),
+    getItem('Flames', '24', <Link to="/Flames"/>),
+    getItem('Krakens', '36', <Link to="/Krakens"/>),
+    getItem('Wild', '23', <Link to="/Wild"/>),
+    getItem('Jets', '22', <Link to="/Jets"/>),
+    getItem('Predators', '21', <Link to="/Predators"/>),
+    getItem('Blues', '20', <Link to="/Blues"/>),
+    getItem('Avalache', '19', <Link to="/Avalanche"/>),
+    getItem('Stars', '18', <Link to="/Stars"/>),
+    getItem('Blackhawks', '17', <Link to="/Blackhawks"/>),
+    getItem('Blue Jackets', '16', <Link to="/Jackets"/>),
+    getItem('Capitals', '15', <Link to="/Capitals"/>),
+    getItem('Penguins', '14', <Link to="/Penguins"/>),
+    getItem('Flyers', '13', <Link to="/Flyers"/>),
+    getItem('Rangers', '12', <Link to="/Rangers"/>),
+    getItem('Islanders', '11', <Link to="/Islanders"/>),
+    getItem('Devils', '10', <Link to="/Devils"/>),
+    getItem('Hurricanes', '9', <Link to="/Hurricanes"/>),
+    getItem('Panthers', '8', <Link to="/Panthers"/>),
+    getItem('Lightning', '6', <Link to="/Lighting"/>),
+    getItem('Canadians', '4', <Link to="/Canadians"/>),
+    getItem('Sabers', '2', <Link to="/Sabers"/>),
+    getItem('Red Wings', '3', <Link to="/Wings"/>),
+    getItem('Oilers','25',<Link to="/Oilers"/> ),
+    getItem('Kings','26',<Link to="/Kings"/> ),
+    getItem('Sharks','27',<Link to="/Sharks"/> ),
+    getItem('Canucks','28',<Link to="/Canucks"/> ),
+    getItem('Coyotes','29',<Link to="/Coyotes"/> ),
+    getItem('Ducks','30',<Link to="/Ducks"/> ),
+    getItem('Golden Knights','35',<Link to="/Knights"/> ),
+    //getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
+  ]),
+  getItem('My Team', 'sub2', <UserOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
+  getItem('Users Teams', 'sub3', <UserOutlined />),
+  getItem('Signin', 'sub4', <Link to="/signup"/>  ),
+  getItem('Login', 'sub5', <Link to="/login"/>  ),
+  getItem('Signout', 'sub6', <Link to="/" />
 
+   ),
+];
 const AppNavBar = () => {
   const [collapsed, setCollapsed] = useState(false);
     return (

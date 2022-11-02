@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { QUERY_PLAYERS } from '../utils/queries';
 
-function Blues(props) {
+function Wings(props) {
     const numbers = props.value;
     const keys  =  props.id;
     const fantasyPoints = props.FantasyPoints;
@@ -13,7 +13,7 @@ function Blues(props) {
     const team = props.Team;
     const teamID = props.TeamID;
     
-    const teamIDBlues = 20;
+    const teamIDWings = 3;
     
     const {loading, data  } = useQuery(QUERY_PLAYERS);
     const players = data?.players ||[];
@@ -34,11 +34,11 @@ function Blues(props) {
                             <div className = "logoPlayer">
                                 <h1>Player Card</h1>
                                     <ul className="navigationPlayer">
-                                        <li>TeamID:{players[teamIDBlues].TeamID}</li>
-                                        <li>PlayerID:{players[teamIDBlues].PlayerID}</li>
-                                        <li>Name:{players[teamIDBlues].Name}</li>
-                                        <li>Team:{players[teamIDBlues].Team}</li>
-                                        <li>FantasyPoints:{players[teamIDBlues].FantasyPoints}</li>
+                                        <li>TeamID:{players[teamIDWings].TeamID}</li>
+                                        <li>PlayerID:{players[teamIDWings].PlayerID}</li>
+                                        <li>Name:{players[teamIDWings].Name}</li>
+                                        <li>Team:{players[teamIDWings].Team}</li>
+                                        <li>FantasyPoints:{players[teamIDWings].FantasyPoints}</li>
                                     </ul>
                             </div>
                         </div>    
@@ -50,4 +50,4 @@ function Blues(props) {
   );
 }
 
-export default Blues;
+export default Wings;
