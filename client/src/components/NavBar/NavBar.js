@@ -4,12 +4,8 @@ import './NavBar.css'
 //import Leafs from './leafs.png'
 //import Flames from './flames.png'
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
   TeamOutlined,
-  UserOutlined,
-  PoweroffOutlined
+  UserOutlined
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
@@ -80,6 +76,13 @@ const items = [
     getItem('Canadians', '4', <Link to="/Canadians"/>),
     getItem('Sabers', '2', <Link to="/Sabers"/>),
     getItem('Red Wings', '3', <Link to="/Wings"/>),
+    getItem('Oilers','25',<Link to="/Oilers"/> ),
+    getItem('Kings','26',<Link to="/Kings"/> ),
+    getItem('Sharks','27',<Link to="/Sharks"/> ),
+    getItem('Canucks','28',<Link to="/Canucks"/> ),
+    getItem('Coyotes','29',<Link to="/Coyotes"/> ),
+    getItem('Ducks','30',<Link to="/Ducks"/> ),
+    getItem('Golden Knights','35',<Link to="/Knights"/> ),
     //getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
   ]),
   getItem('My Team', 'sub2', <UserOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
@@ -92,63 +95,47 @@ const items = [
 ];
 const AppNavBar = () => {
   const [collapsed, setCollapsed] = useState(false);
-  return (
-    <Layout
-    
-      style={{
+    return (
+      <Layout
+        style={{
         minHeight: '100vh',
-      }}
-    >
-      
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-   
-        <div className="logo" />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
-        
-        
-      </Sider>
-      <Layout className="site-layout">
-        <Header
-          className="site-layout-background"
-          style={{
-            padding: 0,
-          }}
-        />
-        <Content
-          style={{
-            margin: '0 16px',
-          }}
-        >
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-           
-            <Breadcrumb.Item>Players</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb>
-          <div
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              minHeight: 360,
-            }}
-          >
-                  
-          </div>
-          
-        </Content>
-        <Footer
-        
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Who Ya Got ©2022
-        </Footer>
+        }}>
+          <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+            <div className="logo" />
+              <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+          </Sider>
+                <Layout className="site-layout">
+                  <Header
+                    className="site-layout-background"
+                      style={{
+                      padding: 0,
+                    }}/>
+                        <Content
+                          style={{
+                          margin: '0 16px',
+                          }}>
+                            <Breadcrumb
+                              style={{
+                              margin: '16px 0'}}>
+                                <Breadcrumb.Item>Players</Breadcrumb.Item>
+                                <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                            </Breadcrumb>
+                              <div
+                                className="site-layout-background"
+                                    style={{
+                                      padding: 24,
+                                      minHeight: 360,
+                                    }}>
+                              </div>
+                        </Content>
+                          <Footer
+                            style={{
+                              textAlign: 'center',
+                            }}>
+                              Who Ya Got ©2022
+                          </Footer>
+                </Layout>
       </Layout>
-    </Layout>
-  );
+    );
 };
 export default AppNavBar;
