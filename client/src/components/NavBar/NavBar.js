@@ -1,8 +1,8 @@
 import 'antd/dist/antd.min.css'
 import './NavBar.css'
-import Sens from './senators.png'
-import Leafs from './leafs.png'
-import Flames from './flames.png'
+//import Sens from './senators.png'
+//import Leafs from './leafs.png'
+//import Flames from './flames.png'
 import {
   DesktopOutlined,
   FileOutlined,
@@ -17,6 +17,9 @@ import Home from '../../pages/Home';
 import SignUp from '../../pages/Signup';
 import Login from '../../pages/Login';
 import Senators from '../../pages/Senators';
+import Leafs from '../../pages/Leafs';
+import Flames from '../../pages/Flames';
+import Krak from '../../pages/Krak';
 import { Link, Navigate, redirect } from 'react-router-dom';
 import { BreadcrumbItem } from 'react-bootstrap'
 
@@ -34,8 +37,10 @@ const items = [
   getItem('Players','sub', <TeamOutlined />, [
     getItem('AllPlayers','20',<Link to="/home"/> ),
     getItem('Senators','1',<Link to="/Senators"/> ),
-    getItem('Maple Leafs','2',<img src={Leafs} width='40' height='35' />),
-    getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
+    getItem('Maple Leafs','2',<Link to="/Leafs"/>),
+    getItem('Flames', '3', <Link to="/Flames"/>),
+    getItem('Krakens', '4', <Link to="/Krak"/>),
+    //getItem('Flames', '3', <img src={Flames} width='40' height='30' />),
   ]),
   getItem('My Team', 'sub2', <UserOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
   getItem('Users Teams', 'sub3', <UserOutlined />),

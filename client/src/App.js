@@ -9,6 +9,9 @@ import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import Home from './pages/Home';
 import Senators from './pages/Senators';
+import Leafs from './pages/Leafs';
+import Flames from './pages/Flames';
+import Krak from './pages/Krak';
 import NoMatch from './pages/NoMatch';
 import AppNavBar from './components/NavBar/NavBar';
 
@@ -93,6 +96,9 @@ function App() {
                 <Route path="/signup" element={<Signup></Signup>}></Route>
                 <Route path="/login" element={<Login></Login>}></Route>
                 <Route path="/Senators" element={<Senators></Senators>}></Route>
+                <Route path="/Leafs" element={<Leafs></Leafs>}></Route>
+                <Route path="/Flames" element={<Flames></Flames>}></Route>
+                <Route path="/Krak" element={<Krak></Krak>}></Route>
                 <Route path="*" element={<NoMatch />}  
             />
             
